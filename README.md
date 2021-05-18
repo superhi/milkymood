@@ -23,3 +23,5 @@ A "puzzle" website introducing students to the concept of more complicated event
 
 - [React.js](https://reactjs.org)
 - HTML/CSS
+- Formik
+- Yup
