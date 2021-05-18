@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { AbsoluteCenter } from "../../styles";
+import styled from 'styled-components'
+import {AbsoluteCenter} from '../../styles'
 
 export const BG = styled.div`
   background: rgba(0, 0, 0, 0.5);
@@ -8,7 +8,7 @@ export const BG = styled.div`
   position: fixed;
   width: 100vw;
   z-index: 2;
-`;
+`
 
 export const Modal = styled.div`
   ${AbsoluteCenter}
@@ -24,7 +24,7 @@ export const Modal = styled.div`
     padding: 30px;
     width: calc(100vw - 30px);
   }
-`;
+`
 
 export const Close = styled.button`
   background: none;
@@ -40,7 +40,7 @@ export const Close = styled.button`
   &:before,
   &:after {
     background-color: #0519ce;
-    content: " ";
+    content: ' ';
     height: 33px;
     left: 15px;
     position: absolute;
@@ -58,4 +58,4 @@ export const Close = styled.button`
     right: 30px;
     top: 30px;
   }
-`;
+`

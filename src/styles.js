@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle, css } from "styled-components";
+import styled, {createGlobalStyle, css} from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
   @keyframes glow {
@@ -22,9 +22,9 @@ export const GlobalStyle = createGlobalStyle`
     width: 100vw;
     -webkit-font-smoothing: antialiased;
   }
-`;
+`
 
-export const Wrapper = styled.section.attrs(({ $color }) => ({
+export const Wrapper = styled.section.attrs(({$color}) => ({
   style: {
     backgroundColor: `hsl(${$color}, 79%, 53%)`,
   },
@@ -34,11 +34,11 @@ export const Wrapper = styled.section.attrs(({ $color }) => ({
   height: 100vh;
   justify-content: center;
   width: 100vw;
-`;
+`
 
-export const ImageContainer = styled.div.attrs(({ $isTogether }) => ({
+export const ImageContainer = styled.div.attrs(({$isTogether}) => ({
   style: {
-    animation: $isTogether ? "glow 3s infinite alternate" : "none",
+    animation: $isTogether ? 'glow 3s infinite alternate' : 'none',
   },
 }))`
   display: flex;
@@ -46,14 +46,14 @@ export const ImageContainer = styled.div.attrs(({ $isTogether }) => ({
   height: 600px;
   position: relative;
   width: 400px;
-`;
+`
 
 export const AbsoluteCenter = css`
   left: 50%;
   top: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
-`;
+`
 
 export const Button = styled.button`
   ${AbsoluteCenter}
@@ -64,7 +64,7 @@ export const Button = styled.button`
   cursor: pointer;
   font-size: 34px;
   font-weight: 600;
-  font-family: "Work Sans", sans-serif;
+  font-family: 'Work Sans', sans-serif;
   line-height: 1;
   text-transform: uppercase;
   padding: 25px 0 20px;
@@ -75,4 +75,4 @@ export const Button = styled.button`
     font-size: 24px;
     width: 220px;
   }
-`;
+`

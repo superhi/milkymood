@@ -1,7 +1,7 @@
-import React from "react";
-import { BG, Modal, Close } from "./styles";
+import React from 'react'
+import {BG, Modal, Close} from './styles'
 
-const ModalComponent = ({ toggleModal, children }) => (
+const ModalComponent = ({toggleModal, children}) => (
   <>
     <BG onClick={toggleModal} />
     <Modal>
@@ -9,6 +9,6 @@ const ModalComponent = ({ toggleModal, children }) => (
       {children}
     </Modal>
   </>
-);
+)
 
-export default ModalComponent;
+export default ModalComponent

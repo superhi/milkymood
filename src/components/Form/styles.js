@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Input = styled.input`
   border: 2px solid #000;
@@ -7,7 +7,7 @@ export const Input = styled.input`
   margin: 8px 0 24px;
   padding: 12px;
   width: 100%;
-  font-family: "Work Sans", sans-serif;
+  font-family: 'Work Sans', sans-serif;
   font-weight: 600;
 
   &:focus {
@@ -17,15 +17,15 @@ export const Input = styled.input`
   @media (max-width: 700px) {
     font-size: 16px;
   }
-`;
+`
 
 export const Label = styled.label`
   font-weight: 600;
-`;
+`
 
 export const Error = styled.span`
   color: #e26e2d;
-`;
+`
 
 export const Submit = styled.button`
   background: none;
@@ -41,4 +41,4 @@ export const Submit = styled.button`
   @media (max-width: 700px) {
     font-size: 16px;
   }
-`;
+`

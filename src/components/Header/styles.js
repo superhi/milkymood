@@ -1,5 +1,5 @@
-import styled, { css } from "styled-components";
-import { ReactComponent as LogoSVG } from "./logo.svg";
+import styled, {css} from 'styled-components'
+import {ReactComponent as LogoSVG} from './logo.svg'
 
 export const Marginals = css`
   box-sizing: border-box;
@@ -8,7 +8,7 @@ export const Marginals = css`
   position: fixed;
   width: 100vw;
   z-index: 1;
-`;
+`
 
 export const Header = styled.header`
   ${Marginals}
@@ -18,10 +18,10 @@ export const Header = styled.header`
   @media (max-width: 700px) {
     padding: 15px;
   }
-`;
+`
 
 export const Logo = styled(LogoSVG)`
   height: auto;
   max-width: 760px;
   width: 100%;
-`;
+`
