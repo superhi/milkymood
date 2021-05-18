@@ -7,6 +7,8 @@ export const Input = styled.input`
   margin: 8px 0 24px;
   padding: 12px;
   width: 100%;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
 
   &:focus {
     border-color: #0519ce;
