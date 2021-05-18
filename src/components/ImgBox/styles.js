@@ -5,7 +5,7 @@ export const Image = styled.div.attrs(({ $movedX, $movedY }) => ({
     transform: `translate(${$movedX}px, ${$movedY}px)`,
   },
 }))`
-  background-image: url("/images/image.jpeg");
+  background-image: url("/images/image1.jpeg");
   background-position: ${({ $initialX, $initialY }) =>
     `-${$initialX * 100}px -${$initialY * 100}px`};
   background-size: 400px 600px;
