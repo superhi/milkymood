@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from "styled-components";
+import styled, {createGlobalStyle} from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
   @keyframes glow {
@@ -22,9 +22,9 @@ export const GlobalStyle = createGlobalStyle`
     width: 100vw;
     -webkit-font-smoothing: antialiased;
   }
-`;
+`
 
-export const Wrapper = styled.section.attrs(({ $color }) => ({
+export const Wrapper = styled.section.attrs(({$color}) => ({
   style: {
     backgroundColor: `hsl(${$color}, 79%, 53%)`,
   },
@@ -34,11 +34,11 @@ export const Wrapper = styled.section.attrs(({ $color }) => ({
   height: 100vh;
   justify-content: center;
   width: 100vw;
-`;
+`
 
-export const ImageContainer = styled.div.attrs(({ $isTogether }) => ({
+export const ImageContainer = styled.div.attrs(({$isTogether}) => ({
   style: {
-    animation: $isTogether ? "glow 3s infinite alternate" : "none",
+    animation: $isTogether ? 'glow 3s infinite alternate' : 'none',
   },
 }))`
   display: flex;
@@ -46,4 +46,4 @@ export const ImageContainer = styled.div.attrs(({ $isTogether }) => ({
   position: relative;
   height: 600px;
   width: 400px;
-`;
+`

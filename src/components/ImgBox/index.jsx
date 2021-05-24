@@ -5,10 +5,7 @@ const ImgBox = ({x, y, percent}) => {
   const [position, setPosition] = useState([0, 0])
 
   useEffect(() => {
-    setPosition([
-      Math.random() * 400 - x * 100 - 50,
-      Math.random() * 600 - y * 100 - 50
-    ])
+    setPosition([Math.random() * 400 - x * 100 - 50, Math.random() * 600 - y * 100 - 50])
   }, [x, y])
 
   return (
