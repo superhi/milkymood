@@ -1,40 +1,62 @@
 import React from 'react'
 import * as Yup from 'yup'
-import {Formik, Form, useField} from 'formik'
-import {Input, Label, Error, Submit} from './styles'
+import {Formik} from 'formik'
+import {
+  Label,
+  Submit,
+  FieldContainer,
+  FormContainer,
+  TicketSelector,
+  Column,
+  FlexContainer,
+} from './styles'
+import {P} from '../../styles'
 
-const InputComponent = ({label, ...props}) => {
-  const [field, meta] = useField(props)
-
-  return (
-    <Label>
-      {label}: {meta.touched && meta.error && <Error>{meta.error}</Error>}
-      <Input {...field} {...props} />
-    </Label>
-  )
-}
-
-const FormComponent = ({handleSuccess}) => {
+const FormComponent = ({handleSuccess, cartTickets, setCartTickets}) => {
   const schema = Yup.object().shape({
-    name: Yup.string().required('Required field'),
-    email: Yup.string().email('Must be a valid email address').required('Required field'),
+    tickets: Yup.number(),
   })
+
+  const handleChange = (event) => {
+    setCartTickets(event.target.value)
+  }
 
   return (
     <Formik
       initialValues={{
-        name: '',
-        email: '',
+        tickets: 1,
       }}
       onSubmit={handleSuccess}
       validationSchema={schema}
     >
       {() => (
-        <Form>
-          <InputComponent name="name" type="text" label="Name" autoComplete="off" />
-          <InputComponent name="email" type="email" label="Email" autoComplete="off" />
-          <Submit type="submit">Submit</Submit>
-        </Form>
+        <FormContainer>
+          <Label>Select quantity:</Label>
+          <TicketSelector>
+            <FieldContainer as="select" name="tickets" value={cartTickets} onChange={handleChange}>
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((num) => (
+                <option value={num} key={num}>
+                  {num} Ticket{num > 1 && 's'}
+                </option>
+              ))}
+            </FieldContainer>
+
+            <FlexContainer>
+              <Column>
+                <P>Subtotal:</P>
+                <P>Fees:</P>
+                <P>Total:</P>
+              </Column>
+              <Column>
+                <P>${cartTickets * 12}.00</P>
+                <P>$5.00</P>
+                <P>${cartTickets * 12 + 5}.00</P>
+              </Column>
+            </FlexContainer>
+
+            <Submit type="submit">Add to cart</Submit>
+          </TicketSelector>
+        </FormContainer>
       )}
     </Formik>
   )

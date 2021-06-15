@@ -76,3 +76,12 @@ export const Button = styled.button`
     width: 220px;
   }
 `
+
+export const P = styled.p`
+  font-size: 16px;
+  margin: 20px 0;
+
+  @media (max-width: 700px) {
+    font-size: 14px;
+  }
+`
