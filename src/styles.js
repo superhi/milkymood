@@ -3,10 +3,10 @@ import styled, {createGlobalStyle} from 'styled-components'
 export const GlobalStyle = createGlobalStyle`
   @keyframes glow {
     0% {
-      box-shadow: rgb(252, 210, 23) 0 0 0px;
+      box-shadow: rgb(0, 0, 0) 0 0 0px;
     }
     100% {
-      box-shadow: rgb(252, 210, 23) 0 10px 100px;
+      box-shadow: rgb(0, 0, 0) 0 10px 100px;
     }
   }
 
@@ -26,7 +26,7 @@ export const GlobalStyle = createGlobalStyle`
 
 export const Wrapper = styled.section.attrs(({$color}) => ({
   style: {
-    backgroundColor: `hsl(${$color}, 79%, 53%)`,
+    backgroundColor: `${$color}`,
   },
 }))`
   align-items: center;
@@ -46,4 +46,9 @@ export const ImageContainer = styled.div.attrs(({$isTogether}) => ({
   position: relative;
   height: 600px;
   width: 400px;
+`
+
+export const P = styled.p`
+  font-size: 18px;
+  color: #000;
 `

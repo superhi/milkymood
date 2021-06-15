@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import ImgBox from './components/ImgBox'
+import ColorPicker from './components/ColorPicker'
 import {GlobalStyle, Wrapper, ImageContainer} from './styles'
 
 // prettier-ignore
@@ -16,6 +17,8 @@ const matrix = [
 
 const App = () => {
   const [distance, setDistance] = useState(1)
+  const [wrapperColor, setWrapperColor] = useState('#ebafab')
+  const [textColor, setTextColor] = useState('#000000')
 
   const easing = (num) => Math.pow(num, 3)
 
@@ -39,13 +42,15 @@ const App = () => {
   return (
     <>
       <GlobalStyle />
-      <Header />
-      <Footer />
-      <Wrapper
-        onMouseMove={handleMove}
-        onTouchMove={handleTouchMove}
-        $color={Math.round(240 - distance * 40)}
-      >
+      <Header textColor={textColor} />
+      <Footer textColor={textColor} />
+      <ColorPicker
+        textColor={textColor}
+        setTextColor={setTextColor}
+        wrapperColor={wrapperColor}
+        setWrapperColor={setWrapperColor}
+      />
+      <Wrapper onMouseMove={handleMove} onTouchMove={handleTouchMove} $color={wrapperColor}>
         <ImageContainer $isTogether={distance < 0.001}>
           {matrix.map(([x, y], index) => (
             <ImgBox key={index} x={x} y={y} percent={distance} />

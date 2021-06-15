@@ -1,9 +1,9 @@
 import React from 'react'
 import {Header, Logo} from './styles'
 
-const HeaderComponent = () => (
+const HeaderComponent = ({textColor}) => (
   <Header>
-    <Logo title="MilkyMood logo" />
+    <Logo title="MilkyMood logo" $color={textColor} />
   </Header>
 )
 
